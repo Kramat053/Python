@@ -40,9 +40,7 @@ print(d)
 
 
 
-
-
-
+print("All initialized")
 
 
 
