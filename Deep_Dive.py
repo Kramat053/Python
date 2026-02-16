@@ -17,7 +17,7 @@ y = x
 import sys
 print(sys.getrefcount(x))
 
-#Weird Behaviour
+#Weird Behaviours in Python
 #1)Integer Interning (Pre-built Numbers)
 #Note that in the above concept of reference counter if we had taken a variable of value 2 then do aliasing and then do the reference counter the result will be a huge number just because python has already in built values like these to make the programs run fast so due to that the reference counter will be high
 print(sys.getrefcount(a))
@@ -40,3 +40,22 @@ b1 = "1Catch_Me"
 b2 = "1Catch_Me"
 print(id(b1))
 print(id(b2))
+
+#List Storage in Python
+#Python store lists as a contiguous block of memory addresses (pointers) rather than the actual objects themselves, allowing them to hold multiple data types efficiently.
+#To ensure high performance, Python uses over-allocation, grabbing more memory than needed during an append() so that future additions are nearly instantaneous.
+#This structure allows for O(1) random access, meaning Python can jump to any index in the list immediately by calculating its offset in memory.
+
+#Mutability
+#It refers to the ability to change or edit a data in its location
+#List	    ✅ Yes	list.append(), list.pop(), list[0] = x
+#Tuple	    ❌ No	Cannot change; must create new_tuple = old + (x,)
+#String	    ❌ No	str.replace() returns a new string object.
+#Dictionary	✅ Yes	dict["key"] = "new_value"
+#Sets       ✅ Yes   set.add(), set.remove(), set.clear()
+# In immutable data type when you "add" elements, Python doesn't modify the original; it creates an entirely new object at a different memory address.
+#In contrast, mutable objects like lists allow in-place changes, meaning their ID remains constant even as their content grows or shrinks.
+
+#Side Effects of Mutability
+#The main side effect of mutability is aliasing, where multiple variables point to the same memory address, leading to unexpected changes across your program.
+#For example if you modify list_b, list_a changes automatically because they share the same ID.
