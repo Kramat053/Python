@@ -1,8 +1,8 @@
 def a(i):
-    if i/2==0:
+    if i%2==0:
         print("Number is even")
     else:
         print("Numberr is odd")    
 
-a(10)
+a(11)
         
