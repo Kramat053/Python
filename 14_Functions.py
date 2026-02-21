@@ -1,6 +1,7 @@
 #Functions in Python
+#It is a block of code that performs a specific function
 print("Hello")
-a = input("Enter your name")
+a = input("Enter your name ")
 type(a)#Returns data type of any variable
 int(a)#used for type conversion
 abs(4) #Absolute Function
