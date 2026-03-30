@@ -14,6 +14,9 @@ print("Python is fun!","Really!")
 print("Hi")
 print("I am on the same line")
 
+print("Hello World!", end=" ")
+print("I will print on the same line.")
+
 print(3,4,5,sep="/")
 
 print(32)
