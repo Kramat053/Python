@@ -16,5 +16,5 @@ def f():
     def g():
         print("g")
     g()    
-g()        
+f()        
         

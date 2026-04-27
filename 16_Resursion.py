@@ -44,3 +44,5 @@ print(add_ten_lambda(5))
 
 #High Order Function
 #It is a function that takes a function as input or returns a function as an output
+#There are two types one is user derived and the other is built in
+ 
