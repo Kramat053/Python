@@ -36,13 +36,21 @@ def fib_memo(n):
     return result
 print(fib_memo(50))
 
-#Lambda Function
-#It is a one line code anonymous function that 
-#its syntax is--> lambda arguments : expression
-add_ten_lambda = lambda x: x + 10
-print(add_ten_lambda(5))
+#Lamda Function
+#It is an anonymus mostly one line function that does not have a name
+#It is created using the Lambda keyword
+#Its syntax is-->  lambda arguments : expression
+#It automatically returns the result
+x=lambda x : x*x
+print(x(9))
+#It is mostly used in High Order Function
 
 #High Order Function
-#It is a function that takes a function as input or returns a function as an output
-#There are two types one is user derived and the other is built in
+#It is a function that requires an other function to work as it takes a function as input or returns a function as an output
+def square(x):
+    return x * x
+numbers = [1, 2, 3, 4]
+# map is the higher-order function here
+squared_numbers = list(map(square, numbers)) 
+print(squared_numbers) # Output: [1, 4, 9, 16]
  

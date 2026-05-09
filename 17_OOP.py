@@ -5,5 +5,5 @@
 #It automatically returns the result
 
 x=lambda x : x*x
-x(9)
+print(x(9))
 
