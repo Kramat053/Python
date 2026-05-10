@@ -91,7 +91,8 @@ s1 = Student("Alice", "A")
 print(s1.name)  # From Person
 print(s1.grade) # From Student
 
-#Method Overriding
+#Polymorphism
+#1)Method Overriding
 #If a child class defines a method with the same name as a parent class method, the child's version overrides the parent's.
 class Bird:
     def fly(self):
@@ -104,6 +105,40 @@ class Penguin(Bird):
 
 p = Penguin()
 p.fly() # Output: Penguins cannot fly, they swim!
+
+#2) Method Overloading
+#Python does not support traditional method overloading However, because Python is dynamically typed and incredibly flexible, we can achieve the same behavior using a few clever techniques.
+class Calculator:
+    def add(self, a, b, c = 0):
+        return a + b + c
+
+calc = Calculator()
+print(calc.add(5, 10))      # Works with 2 arguments
+print(calc.add(5, 10, 20))  # Works with 3 arguments
+
+#3) Operator Overloading
+#Operator Overloading is about redefining how standard operators (like +, -, *, or <) behave when used with your own custom objects.
+#This is achieved by implementing special methods called Magic Methods
+class Vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    # Overloading the + operator
+    def __add__(self, other):
+        return Vector(self.x + other.x, self.y + other.y)
+
+    # Overloading the str() function for pretty printing
+    def __str__(self):
+        return f"Vector({self.x}, {self.y})"
+
+v1 = Vector(2, 4)
+v2 = Vector(3, 1)
+
+# This calls v1.__add__(v2) under the hood
+v3 = v1 + v2
+
+print(v3)  # Output: Vector(5, 5)
 
 
         
