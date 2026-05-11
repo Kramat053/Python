@@ -20,3 +20,6 @@ gen = mera_range(1,11)
 for i in gen:
      print(i)
          
+#Generator Expression
+gen = (i*i for i in range(1,11))
+print(gen)         
