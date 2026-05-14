@@ -32,11 +32,11 @@ def get_result():
         if second_number == 0:
             result_label.config(text = "Error")
         else:
-            result_label.config(text = str(first_number / second_number))
+            result_label.config(text = str(round(first_number / second_number,2)))
           
 root = Tk()
 root.title("Calculator")
-root.geometry("250x400")
+root.geometry("415x450")
 root.resizable(0,0)
 root.config(background = "black")
 
